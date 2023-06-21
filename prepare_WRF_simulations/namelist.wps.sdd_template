@@ -1,0 +1,39 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 4,
+ start_date = '2015-08-27_00:00:00','2015-08-27_00:00:00','2015-08-27_00:00:00','2015-08-27_00:00:00',
+ end_date   = '2015-08-29_00:00:00','2015-08-29_00:00:00','2015-08-29_00:00:00','2015-08-29_00:00:00',
+ interval_seconds = 21600
+ io_form_geogrid = 2,
+/
+
+&geogrid
+ parent_id         =   1,   1,  2,  3,
+ parent_grid_ratio =   1,   3,  3,  3,
+ i_parent_start    =   1,  32, 86, 174,
+ j_parent_start    =   1,  28, 67, 170,
+ e_we              =  192, 391, 700, 1048
+ e_sn              =  176, 361, 646, 628,
+ geog_data_res = 'default','default','default','default',
+ dx = 27000,
+ dy = 27000,
+ map_proj = 'mercator',
+ ref_lat   =  24.762,
+ ref_lon   =  114.193,
+ truelat1  =  24.762,
+ truelat2  =  0,
+ stand_lon = 114.193,
+ geog_data_path = './WPS_GEOG/',
+ ref_x = 96.0,
+ ref_y = 88.0,
+/
+
+&ungrib
+ out_format = 'WPS',
+ prefix = 'FILE',
+/
+
+&metgrid
+ fg_name = 'FILE'
+ io_form_metgrid = 2, 
+/
